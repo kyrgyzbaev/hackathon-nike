@@ -1,3 +1,18 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "NIKE AIR JORDAN 1 RETRO HIGH OG 'HERITAGE'",
+      "description": "The Air Jordan 1 Retro High OG ‘Heritage’ showcases a familiar color scheme rooted in the history of the Jordan franchise. The white leather upper features contrasting hits of University Red on the toe box, Swoosh, heel, and ankle flap. The latter is stamped with a retro Wings logo in black, matching the laces and high-cut padded collar. Nike Air branding decorates the woven tongue tag. The sneaker sits atop a rubber cupsole with encapsulated Air-sole cushioning in the heel.",
+      "price": 8000,
+      "image": "https://cdn.shopify.com/s/files/1/0591/4591/2459/products/898959_03_jpg_1080x.jpg?v=1654274337",
+      "id": 2
+    },
+    {
+      "title": "NIKE REACT PHANTOM 'GLACIER BLUE'",
+      "description": "Certified & Authentic ",
+      "price": 4000,
+      "image": "https://cdn.shopify.com/s/files/1/0591/4591/2459/products/Screenshot2022-04-05101537_540x.png?v=1654274941",
+      "id": 3
+    }
+  ]
 }

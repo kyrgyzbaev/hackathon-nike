@@ -1,4 +1,4 @@
-import firebase from "firebase/compat/app";
+import fire from "firebase/compat/app";
 import "firebase/compat/app";
 import "firebase/compat/auth";
 
@@ -9,6 +9,7 @@ const firebaseConfig = {
   storageBucket: "react-hackaton.appspot.com",
   messagingSenderId: "412491220677",
   appId: "1:412491220677:web:c8de5b9f4ae908f1f412ac",
+  measurementId: "G-6B9SLLKPLC",
 };
 
-export default firebase.initializeApp(firebaseConfig);
+export default fire.initializeApp(firebaseConfig);
