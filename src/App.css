@@ -2,9 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Crimson Text", serif;
+  background-image: url("");
 }
 
 .images {
   display: flex;
   flex-direction: column;
+}
+
+.icon-1 {
+  margin: 20px;
+}
+
+.header {
+}
+
+.appbar {
+  font-family: "Crimson Text", serif;
 }
