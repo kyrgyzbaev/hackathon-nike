@@ -10,13 +10,12 @@ import {
 } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { productsContext } from "../../contexts/mensContext";
+import { mensContext } from "../../contexts/mensContext";
 
 // title, description, price, image
 
 const EditProductForm = () => {
-  const { getOneProduct, oneProduct, updateProduct } =
-    useContext(productsContext);
+  const { getOneProduct, oneProduct, updateProduct } = useContext(mensContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -51,22 +50,31 @@ const EditProductForm = () => {
   return oneProduct ? (
     <Container maxWidth="sm">
       <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          Home
+        <Link
+          fontFamily={"-moz-initial"}
+          underline="hover"
+          color="inherit"
+          href="/">
+          Shop
         </Link>
-        <Link underline="hover" color="inherit" href="/mens">
+        <Link
+          fontFamily={"-moz-initial"}
+          underline="hover"
+          color="inherit"
+          href="/mens">
           Mens
         </Link>
-        <Typography color="text.primary">Edit</Typography>
+        <Typography fontFamily={"-moz-initial"} color="text.primary">
+          Edit
+        </Typography>
       </Breadcrumbs>
       <Box
+        fontFamily={"-moz-initial"}
         display={"flex"}
         flexDirection={"column"}
         padding={"30px"}
         textAlign={"center"}>
-        <Typography variant="h4" component="h2">
-          Edit mens
-        </Typography>
+        <p className="edit-m-p">Edit mens</p>
         <TextField
           value={title}
           onChange={e => setTitle(e.target.value)}
@@ -100,13 +108,9 @@ const EditProductForm = () => {
           variant="standard"
           style={{ margin: "10px" }}
         />
-        <Button
-          onClick={handleValues}
-          style={{ margin: "10px" }}
-          variant="contained"
-          color="success">
+        <button className="edit-m-btn" onClick={handleValues}>
           Save product
-        </Button>
+        </button>
       </Box>
     </Container>
   ) : (

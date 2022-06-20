@@ -4,8 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 import { womensContext } from "../../contexts/womensContext";
 import Filters from "../Filters/Filters";
-import ProductCard from "../MensCard/MensCard";
-import ProductCard2 from "../WomensCard/WomensCard";
+import WomensCard from "../WomensCard/WomensCard";
 
 const WomensList = () => {
   const { getWomens, womens, pages } = useContext(womensContext);
@@ -28,14 +27,14 @@ const WomensList = () => {
       price_gte: price[0],
       price_lte: price[1],
       _page: page,
-      _limit: 3,
+      _limit: 12,
     });
   }, [search, price, page]);
   useEffect(() => {
     getWomens();
   }, [searchParams]);
 
-  console.log(womens);
+  // console.log(womens);
   // console.log(pages);
   //   console.log(price);
 
@@ -44,15 +43,17 @@ const WomensList = () => {
   return (
     <Container>
       {isAdmin ? (
-        <Button
+        <button
+          className="add-womens-button"
           variant="outlined"
           style={{ margin: "30px" }}
           onClick={() => navigate("/add-womens")}>
           Add womens
-        </Button>
+        </button>
       ) : null}
 
       <Filters
+        className="search-w"
         search={search}
         setSearch={setSearch}
         price={price}
@@ -64,7 +65,7 @@ const WomensList = () => {
         justifyContent={"center"}
         paddingTop={"30px"}>
         {womens.map(item => (
-          <ProductCard2 key={item.id} item={item} />
+          <WomensCard key={item.id} item={item} />
         ))}
       </Box>
       <Box display={"flex"} justifyContent={"center"}>

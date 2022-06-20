@@ -1,9 +1,9 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 
-export const productsContext = React.createContext();
+export const mensContext = React.createContext();
 
-const API = "http://localhost:8000/products";
+const API = "http://localhost:8000/mens";
 
 const INIT_STATE = {
   products: [],
@@ -58,7 +58,7 @@ const ProductsContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedProduct);
   }
   return (
-    <productsContext.Provider
+    <mensContext.Provider
       value={{
         products: state.products,
         oneProduct: state.oneProduct,
@@ -70,7 +70,7 @@ const ProductsContextProvider = ({ children }) => {
         updateProduct,
       }}>
       {children}
-    </productsContext.Provider>
+    </mensContext.Provider>
   );
 };
 export default ProductsContextProvider;

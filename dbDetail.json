@@ -1,0 +1,32 @@
+{
+  "detailImage": [
+    {
+      "firstImage": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d87bf728-57ce-4d35-badb-9b1abe743888/air-jordan-14-retro-se-mens-shoe-QkWFjG.png",
+      "secondImage": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/4cc2bd92-3bb4-4db5-a91c-08ddf1cdd77d/air-jordan-14-retro-se-mens-shoe-QkWFjG.png",
+      "thirdImage": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/811ca527-0805-4b3d-94e5-7804862c535c/air-jordan-14-retro-se-mens-shoe-QkWFjG.png",
+      "fourthImage": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ef1461ad-6276-421c-96f5-22edf67658c1/air-jordan-14-retro-se-mens-shoe-QkWFjG.png",
+      "id": 11
+    },
+    {
+      "firstImage": "adas",
+      "secondImage": "dfs",
+      "thirdImage": "sfd",
+      "fourthImage": "asd",
+      "id": 12
+    },
+    {
+      "firstImage": "sdfsdfsd",
+      "secondImage": "sdfsf",
+      "thirdImage": "fsdfsdf",
+      "fourthImage": "sdfsdfs",
+      "id": 13
+    },
+    {
+      "firstImage": "dsfs",
+      "secondImage": "fsfsfsfs",
+      "thirdImage": "fsfsfss",
+      "fourthImage": "fsdsd",
+      "id": 14
+    }
+  ]
+}

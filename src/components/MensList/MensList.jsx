@@ -2,12 +2,12 @@ import { Box, Button, Container, Pagination } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
-import { productsContext } from "../../contexts/mensContext";
+import { mensContext } from "../../contexts/mensContext";
 import Filters from "../Filters/Filters";
 import ProductCard from "../MensCard/MensCard";
 
 const ProductsList = () => {
-  const { getProducts, products, pages } = useContext(productsContext);
+  const { getProducts, products, pages } = useContext(mensContext);
   const { isAdmin } = useContext(authContext);
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -25,7 +25,7 @@ const ProductsList = () => {
       price_gte: price[0],
       price_lte: price[1],
       _page: page,
-      _limit: 6,
+      _limit: 12,
     });
   }, [search, price, page]);
   useEffect(() => {
@@ -39,12 +39,13 @@ const ProductsList = () => {
   return (
     <Container>
       {isAdmin ? (
-        <Button
+        <button
+          className="add-mens-button"
           variant="outlined"
           style={{ margin: "30px" }}
           onClick={() => navigate("/add-mens")}>
           Add mens
-        </Button>
+        </button>
       ) : null}
 
       <Filters

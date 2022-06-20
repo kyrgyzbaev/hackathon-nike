@@ -10,69 +10,75 @@ import React, { useContext, useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useNavigate } from "react-router-dom";
-import { cartContext } from "../../contexts/cartContext";
 import { authContext } from "../../contexts/authContext";
 import { womensContext } from "../../contexts/womensContext";
+import { womenscartContext } from "../../contexts/womenscartContext";
 
 const WomensCard = ({ item }) => {
   const navigate = useNavigate();
-  const { deleteProduct } = useContext(womensContext);
+  const { deleteWomen } = useContext(womensContext);
   const { isAdmin } = useContext(authContext);
-  const { addProductToCart, checkProductInCart } = useContext(cartContext);
-  const [checkProduct, setCheckProduct] = useState(checkProductInCart(item));
-  console.log(item);
+  const { addWomenToCart, checkWomenInCart } = useContext(womenscartContext);
+  const [checkWomen, setCheckWomen] = useState(checkWomenInCart(item));
+  // console.log(item);
 
   return (
-    <Card sx={{ maxWidth: 300, margin: "10px" }}>
+    <div className="womens-card">
       <CardMedia
         component="img"
         alt="green iguana"
         height="200"
         image={item.image}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
+      <div className="womens-card-2">
+        <p className="p-w-1">{item.title}</p>
+        <p className="p-w-2">
           {item.description.length > 20
             ? `${item.description.slice(0, 20)}...`
             : item.description}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.price}
-        </Typography>
-      </CardContent>
+        </p>
+        <p className="p-w-3">{item.price}</p>
+      </div>
       <CardActions>
         {isAdmin ? (
           <>
-            <Button size="small" onClick={() => deleteProduct(item.id)}>
-              <DeleteIcon />
+            <Button size="small" onClick={() => deleteWomen(item.id)}>
+              <DeleteIcon className="delete-icon-w" />
             </Button>
-            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-              <EditIcon />
+            <Button
+              size="small"
+              onClick={() => navigate(`/edit-womens/${item.id}`)}>
+              <EditIcon className="edit-icon-w" />
             </Button>
           </>
         ) : null}
 
         <Button
           onClick={() => {
-            addProductToCart(item);
-            setCheckProduct(checkProductInCart(item));
+            addWomenToCart(item);
+            setCheckWomen(checkWomenInCart(item));
           }}
           size="small">
-          <AddShoppingCartIcon
-            onClick={() => navigate("/cart")}
-            color={checkProduct ? "secondary" : "primary"}
-          />
+          {checkWomen ? (
+            <img
+              className="mens-cart-icon"
+              src="https://img.icons8.com/material-sharp/344/shopping-cart-loaded.png"
+              onClick={() => navigate("/womens-cart")}
+            />
+          ) : (
+            <img
+              className="mens-cart-icon"
+              src="https://img.icons8.com/material-sharp/344/favorite-cart.png"
+              onClick={() => navigate("/cart")}
+            />
+          )}
         </Button>
         <Button size="small" onClick={() => navigate(`/womens/${item.id}`)}>
-          <MoreHorizIcon />
+          <MoreHorizIcon className="more-icon-w" />
         </Button>
       </CardActions>
-    </Card>
+    </div>
   );
 };
 

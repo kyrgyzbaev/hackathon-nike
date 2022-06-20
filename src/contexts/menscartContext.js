@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 
-export const cartContext = React.createContext();
+export const menscartContext = React.createContext();
 
 const INIT_STATE = {
   cart: null,
@@ -19,7 +19,7 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-const CartContextProvider = ({ children }) => {
+const MensCartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   function addProductToCart(product) {
@@ -91,6 +91,7 @@ const CartContextProvider = ({ children }) => {
     cart.products = cart.products.map(item => {
       if (item.item.id === id) {
         item.count = count;
+        item.products = item.count * item.item.image;
         item.subPrice = item.count * item.item.price;
       }
       return item;
@@ -105,7 +106,7 @@ const CartContextProvider = ({ children }) => {
     getCart();
   }
   return (
-    <cartContext.Provider
+    <menscartContext.Provider
       value={{
         cart: state.cart,
         count: state.count,
@@ -116,7 +117,7 @@ const CartContextProvider = ({ children }) => {
         deleteFromCart,
       }}>
       {children}
-    </cartContext.Provider>
+    </menscartContext.Provider>
   );
 };
-export default CartContextProvider;
+export default MensCartContextProvider;

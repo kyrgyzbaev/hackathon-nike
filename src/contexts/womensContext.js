@@ -19,7 +19,7 @@ function reducer(state = INIT_STATE, action) {
         pages: Math.ceil(action.payload.headers["x-total-count"] / 3),
       };
     case "GET_ONE_WOMEN":
-      return { ...state, oneProduct: action.payload };
+      return { ...state, oneWomen: action.payload };
     default:
       return state;
   }

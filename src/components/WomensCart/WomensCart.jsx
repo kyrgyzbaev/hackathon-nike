@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { cartContext } from "../../contexts/cartContext";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -13,12 +12,13 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import InfoIcon from "@mui/icons-material/Info";
 import { useNavigate } from "react-router-dom";
+import { womenscartContext } from "../../contexts/womenscartContext";
 
-export default function Cart() {
-  const { getCart, cart, changeProductCount, deleteFromCart } =
-    useContext(cartContext);
+export default function WomensCart() {
+  const { getWomensCart, womenscart, changeWomensCount, deleteFromCart } =
+    useContext(womenscartContext);
   useEffect(() => {
-    getCart();
+    getWomensCart();
   }, []);
   const navigate = useNavigate();
   // console.log(cart);
@@ -36,8 +36,8 @@ export default function Cart() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {cart &&
-              cart?.products.map(row => (
+            {womenscart &&
+              womenscart?.womens.map(row => (
                 <TableRow
                   key={row.item.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
@@ -48,7 +48,7 @@ export default function Cart() {
                   <TableCell align="right">
                     <IconButton
                       onClick={() =>
-                        changeProductCount(row.count - 1, row.item.id)
+                        changeWomensCount(row.count - 1, row.item.id)
                       }
                       aria-label="delete">
                       <RemoveIcon />
@@ -56,7 +56,7 @@ export default function Cart() {
                     {row.count}
                     <IconButton
                       onClick={() =>
-                        changeProductCount(row.count + 1, row.item.id)
+                        changeWomensCount(row.count + 1, row.item.id)
                       }
                       aria-label="delete">
                       <AddIcon />
@@ -70,7 +70,7 @@ export default function Cart() {
                       <DeleteIcon />
                     </IconButton>
                     <IconButton
-                      onClick={() => navigate(`/products/${row.item.id}`)}
+                      onClick={() => navigate(`/womens/${row.item.id}`)}
                       aria-label="delete">
                       <InfoIcon />
                     </IconButton>
@@ -87,7 +87,7 @@ export default function Cart() {
           margin: "30px 20px",
         }}>
         <Typography variant="h4" component="h2">
-          Total: {cart && cart?.totalPrice}
+          Total: {womenscart && womenscart?.totalPrice}
         </Typography>
       </Box>
     </Container>

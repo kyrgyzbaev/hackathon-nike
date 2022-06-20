@@ -44,12 +44,9 @@ const RegisterForm = () => {
         label="Password"
         variant="outlined"
       />
-      <Button
-        variant="contained"
-        style={{ width: "40%", margin: "10px" }}
-        onClick={handleValues}>
+      <button className="register-btn" onClick={handleValues}>
         Register
-      </Button>
+      </button>
       <Typography variant="p" component="h2">
         Already have an account?
       </Typography>

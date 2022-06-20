@@ -42,12 +42,9 @@ const LoginForm = () => {
         label="Password"
         variant="outlined"
       />
-      <Button
-        variant="contained"
-        style={{ width: "40%", margin: "10px" }}
-        onClick={handleValues}>
+      <button className="login-btn" onClick={handleValues}>
         Login
-      </Button>
+      </button>
       <Typography variant="p" component="h2">
         Don't have an account?
       </Typography>

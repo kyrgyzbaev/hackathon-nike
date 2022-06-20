@@ -9,12 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { productsContext } from "../../contexts/mensContext";
+import { mensContext } from "../../contexts/mensContext";
 
 // title, description, price, image
 
 const AddProductForm = () => {
-  const { createProduct } = useContext(productsContext);
+  const { createProduct } = useContext(mensContext);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -30,7 +30,7 @@ const AddProductForm = () => {
       image,
     };
     if (!title.trim() || !description.trim() || !price || !image.trim()) {
-      alert("заполните поля!");
+      alert("fill in the fields!");
       return;
     }
     createProduct(newProduct);
@@ -40,19 +40,23 @@ const AddProductForm = () => {
   return (
     <Container maxWidth="sm">
       <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/mens">
+        <Link
+          fontFamily={"-moz-initial"}
+          underline="hover"
+          color="inherit"
+          href="/mens">
           Mens
         </Link>
-        <Typography color="text.primary">Add</Typography>
+        <Typography fontFamily={"-moz-initial"} color="text.primary">
+          Add
+        </Typography>
       </Breadcrumbs>
       <Box
         display={"flex"}
         flexDirection={"column"}
         padding={"30px"}
         textAlign={"center"}>
-        <Typography fontFamily={"-moz-initial"} variant="h4" component="h2">
-          Add new mens product
-        </Typography>
+        <p className="add-m-t">Add new mens product</p>
         <TextField
           value={title}
           onChange={e => setTitle(e.target.value)}
@@ -68,7 +72,7 @@ const AddProductForm = () => {
           style={{ margin: "10px" }}
         />
         <TextField
-          type="number"
+          type={"number"}
           value={price}
           onChange={e => setPrice(+e.target.value)}
           label="Price"
@@ -83,13 +87,14 @@ const AddProductForm = () => {
           variant="standard"
           style={{ margin: "10px" }}
         />
-        <Button
+
+        <button
+          className="add-mens-btn"
           onClick={handleValues}
           style={{ margin: "10px" }}
-          variant="contained"
-          color="success">
+          variant="contained">
           Add mens product
-        </Button>
+        </button>
       </Box>
     </Container>
   );

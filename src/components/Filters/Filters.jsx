@@ -31,7 +31,7 @@ const Search = styled("div")(({ theme }) => ({
   },
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "innerhit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -46,7 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Filters = ({ search, setSearch, price, setPrice }) => {
   return (
     <div>
-      <Search>
+      <Search className="search">
         <SearchIconWrapper>
           <SearchIcon />
         </SearchIconWrapper>
@@ -60,12 +60,14 @@ const Filters = ({ search, setSearch, price, setPrice }) => {
 
       <Slider
         // getAriaLabel={() => "Temperature range"}
+        className="filters"
         value={price}
         onChange={(e, value) => setPrice(value)}
         valueLabelDisplay="auto"
         min={1}
         max={10000}
         step={100}
+        color={"secondary"}
       />
     </div>
   );

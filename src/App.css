@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Crimson Text", serif;
-  background-image: url("");
+  /* font-family: "Crimson Text", serif; */
 }
 
 .images {
@@ -16,8 +15,881 @@
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: rgba(63, 73, 79, 0.417);
+  color: white;
+  padding-top: 20px;
 }
 
 .appbar {
   font-family: "Crimson Text", serif;
 }
+
+/*  */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-mens-button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+}
+
+.add-womens-button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+}
+
+.add-mens-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+}
+
+.add-womens-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+}
+
+.edit-m-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+}
+
+.edit-m-p {
+  font-size: 40px;
+}
+
+.edit-w-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+}
+
+.edit-w-p {
+  font-size: 40px;
+  font-family: "Crimson Text", serif;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid rgba(181, 178, 178, 0.292);
+  /* border-radius: 5px; */
+  box-shadow: 1px 1px rgba(128, 128, 128, 0.34);
+  margin-bottom: 50px;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.womens-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid rgba(181, 178, 178, 0.292);
+  /* border-radius: 5px; */
+  box-shadow: 1px 1px rgba(128, 128, 128, 0.34);
+  margin-bottom: 50px;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.card-2 {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+}
+
+.womens-card-2 {
+  margin: 20px;
+  padding: 20px;
+}
+
+.p-1 {
+  font-size: 20px;
+}
+
+.p-2 {
+  color: rgba(62, 62, 62, 0.577);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.p-3 {
+  font-size: 20px;
+}
+.p-w-1 {
+  font-size: 20px;
+}
+
+.p-w-2 {
+  color: rgba(62, 62, 62, 0.577);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.p-w-3 {
+  font-size: 20px;
+}
+.more-icon {
+  color: rgb(24, 21, 21);
+}
+
+.cart-icon {
+  width: 23px;
+}
+
+.cart-icon-2 {
+  color: rgb(24, 21, 21);
+}
+
+.edit-icon {
+  color: rgb(24, 21, 21);
+}
+
+.mens-cart-icon {
+  width: 23px;
+}
+
+.delete-icon {
+  color: rgb(24, 21, 21);
+}
+
+.delete-icon-w {
+  color: black;
+}
+
+.edit-icon-w {
+  color: black;
+}
+
+.more-icon-w {
+  color: black;
+}
+
+.icons {
+  display: flex;
+  justify-content: baseline;
+  padding-right: 10px;
+}
+
+.account-icon {
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+.detail-img-btn {
+  width: 130px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px 5px 5px;
+  background-color: rgb(24, 21, 21);
+  font-size: 19px;
+  color: white;
+  margin-top: 20px;
+}
+
+.add-detail-img-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(24, 21, 21);
+}
+
+.filters {
+  color: black;
+}
+
+.login-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  width: 40%;
+  height: 30px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+  margin-bottom: 20px;
+}
+
+.register-btn {
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  width: 40%;
+  height: 30px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-family: "Crimson Text", serif;
+  margin-bottom: 20px;
+}
+
+.mens-detail {
+  font-family: "Crimson Text", serif;
+}
+
+.home-img-1 {
+  margin-top: 90px;
+}
+
+.home-img-2 {
+  /* margin-bottom: ; */
+}
+
+.register-h {
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(41, 86, 100, 0.384);
+  margin-right: 40px;
+  width: 140px;
+  height: 35px;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+}
+
+.login-h {
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  background-color: white;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(41, 86, 100, 0.384);
+  width: 140px;
+  height: 35px;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+}
+
+.p-h {
+  display: flex;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.p-h-2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+  margin: 0;
+  margin-top: -0.001px;
+  margin-bottom: 4px;
+  padding-top: 10px;
+}
+
+.p-h-3 {
+  display: flex;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 60px;
+  margin: 0;
+  /* margin-top: 40px; */
+  margin-bottom: -86px;
+}
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: baseline;
+  height: 30vh;
+  width: 100%;
+  background-color: rgb(24, 21, 21);
+  margin-top: 45px;
+  color: white;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+}
+
+.just {
+  padding-left: 50px;
+  padding-top: 35px;
+  font-size: 40px;
+}
+
+.just-it {
+  background-color: rgba(127, 131, 117, 0.344);
+}
+
+.get-first {
+  background-color: rgba(127, 131, 117, 0.344);
+  height: 60px;
+  margin-bottom: 4px;
+}
+
+.mens-p {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 22px;
+}
+
+.mens-p:after {
+  display: block;
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz--transition: width 0.2s ease-in-out;
+  transition: width 0.1s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mens-p:hover:after,
+.mens-p:focus:after {
+  width: 100%;
+}
+
+.womens-p {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 22px;
+}
+
+.womens-p:after {
+  display: block;
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz--transition: width 0.2s ease-in-out;
+  transition: width 0.1s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.womens-p:hover:after,
+.womens-p:focus::after {
+  width: 100%;
+}
+
+.sizing-chart {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.sizing-chart:after {
+  display: block;
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz--transition: width 0.2s ease-in-out;
+  transition: width 0.1s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.sizing-chart:hover:after,
+.sizing-chart:focus:after {
+  width: 100%;
+}
+
+.home {
+  display: flex;
+}
+
+.nike {
+  cursor: pointer;
+}
+
+.change-img:hover .front-side-img {
+  transform: rotateY(180deg);
+}
+
+.front-side-img {
+  transition: 1s;
+}
+
+.string-detail-img-2 h1 {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.string-detail-img-2 p {
+  max-width: 800px;
+  max-height: 300px;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.string-m-detail h1 {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.string-m-detail p {
+  max-width: 800px;
+  max-height: 300px;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.w-d-box {
+  display: flex;
+  justify-content: baseline;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.m-d-box {
+  display: flex;
+  justify-content: baseline;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.mens-detail-img {
+  width: 500px;
+  height: 500px;
+  margin-right: 200px;
+}
+
+.womens-detail-img {
+  width: 500px;
+  height: 500px;
+  margin-right: 200px;
+}
+
+.img-1 {
+  margin-bottom: -5px;
+}
+
+.about-nike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+.about-nike a {
+  font-family: "Crimson Text", serif;
+  text-decoration: none;
+  color: gray;
+  margin: 8px;
+  font-size: 13px;
+}
+
+.about-nike p {
+  font-size: 20px;
+}
+
+.about-2022 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.nike-2022 a {
+  font-family: "Crimson Text", serif;
+  text-decoration: none;
+  color: gray;
+  font-size: 12px;
+  padding-bottom: -10px;
+}
+
+.nike-2022 {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.get-help {
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+  padding-left: 100px;
+}
+
+.get-help a {
+  text-decoration: none;
+  color: gray;
+  font-family: "Crimson Text", serif;
+  font-size: 12px;
+  margin: 8px;
+}
+
+.get-help p {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.gift-cards {
+  padding-top: 50px;
+  padding-left: 60px;
+}
+
+.gift-cards p {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.guides {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.guides a {
+  text-decoration: none;
+  color: gray;
+  font-family: "Crimson Text", serif;
+  font-size: 12px;
+  margin: 20px;
+  padding-bottom: -30px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: baseline;
+  color: gray;
+  margin-top: 50px;
+  margin-right: 80px;
+}
+
+.inst-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.face-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.twit-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.y-icon {
+  cursor: pointer;
+}
+
+.search {
+  margin: 20px;
+}
+
+.add-w-t {
+  font-size: 40px;
+}
+.add-m-t {
+  font-size: 40px;
+}
+
+.table {
+  max-width: 650px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  max-width: 680px;
+  max-height: 300px;
+  margin-top: 20px;
+}
+
+.order-btn {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.modal {
+  width: 500px;
+  height: 500px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.text-f {
+  max-width: 400px;
+}
+
+.order-p {
+  display: flex;
+  justify-content: baseline;
+}
+
+.o-p {
+  color: gray;
+  cursor: pointer;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+}
+
+.next-btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 40px;
+}
+
+.paynow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+.pay-btn {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px 5px 5px;
+  background-color: rgba(60, 67, 80, 0.409);
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 40px;
+}
+
+@media all and (max-width: 1200px) {
+  .mens-p {
+    font-size: 20px;
+  }
+  .womens-p {
+    font-size: 20px;
+  }
+  .nike {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .footer-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  /* .gift-cards {
+    display: none;
+  } */
+  .guides {
+    display: none;
+  }
+  .table {
+    max-width: 600px;
+  }
+}
+
+@media all and (max-width: 555px) {
+  .gift-cards {
+    display: none;
+  }
+  .p-h {
+    font-size: 20px;
+  }
+  .p-h-2 {
+    font-size: 20px;
+  }
+  .p-h-3 {
+    font-size: 20px;
+  }
+  .login-h {
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .register-h {
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+  }
+  .header {
+    height: 5vh;
+  }
+  .mens-p {
+    font-size: 12px;
+  }
+  .womens-p {
+    font-size: 12px;
+  }
+  .account-icon {
+    width: 5px;
+    height: 5px;
+  }
+  .nike {
+    width: 30px;
+  }
+  .add-mens-button {
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .add-womens-button {
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .add-m-t {
+    font-size: 20px;
+  }
+  .add-mens-btn {
+    width: 40%;
+  }
+  .add-w-t {
+    font-size: 20px;
+  }
+  .add-womens-btn {
+    width: 40%;
+  }
+  .mens-p {
+    padding-bottom: 50px;
+  }
+  .womens-p {
+    padding-bottom: 50px;
+  }
+  .nike {
+    padding-top: 1px;
+  }
+  .icons {
+    padding-top: 1px;
+  }
+}
+
+@media all and (max-width: 366px) {
+  .get-help p {
+    font-size: 10px;
+  }
+  .get-help a {
+    font-size: 7px;
+  }
+  .get-help {
+    padding-left: 30px;
+  }
+  .footer {
+    height: 20vh;
+  }
+  .nike-2022 {
+    display: none;
+  }
+  .about-nike p {
+    font-size: 10px;
+  }
+  .about-nike a {
+    font-size: 7px;
+  }
+  .footer-icons {
+    padding-left: 40px;
+  }
+  .about-nike {
+    padding-left: 30px;
+  }
+  .nike {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+/* @media all and (min-width: 550px) {
+  .gift-cards {
+    display: none;
+  }
+} */
